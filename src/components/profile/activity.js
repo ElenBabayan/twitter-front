@@ -14,7 +14,6 @@ import {
 } from "../styles/profile";
 import { isImage, isVideo } from "../../media";
 import Loading from "../loading";
-import Bookmark from "./bookmark";
 import Modal from "../modal";
 import CommentModal from "../tweet/commentModal";
 
@@ -199,11 +198,6 @@ const Activity = (props) => {
                       updateDetails={updateDetails}
                       myId={myId}
                       getData={getData}
-                    />
-                    <Bookmark
-                      tweet={tweet}
-                      myId={myId}
-                      removeBookmark={removeBookmark}
                     />
                   </TweetDetails>
                 </div>

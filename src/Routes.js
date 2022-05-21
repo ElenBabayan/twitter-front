@@ -11,7 +11,6 @@ const Notifications = React.lazy(() =>
   import("./components/notifications/index")
 );
 const Messages = React.lazy(() => import("./components/messages/index"));
-const BookMarks = React.lazy(() => import("./components/bookmarks/index"));
 const Lists = React.lazy(() => import("./components/lists/index"));
 const Profile = React.lazy(() => import("./components/profile/index"));
 const Tweet = React.lazy(() => import("./components/tweet/index"));
@@ -79,7 +78,6 @@ const Routes = () => {
           component={withMenuBar(Notifications)}
         />
         <PrivateRoute path="/messages" component={withMenuBar(Messages)} />
-        <PrivateRoute path="/bookmarks" component={withMenuBar(BookMarks)} />
         <PrivateRoute path="/lists" component={withMenuBar(Lists)} />
         <PrivateRoute
           exact
