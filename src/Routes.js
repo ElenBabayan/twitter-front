@@ -11,7 +11,6 @@ const Notifications = React.lazy(() =>
   import("./components/notifications/index")
 );
 const Messages = React.lazy(() => import("./components/messages/index"));
-const Lists = React.lazy(() => import("./components/lists/index"));
 const Profile = React.lazy(() => import("./components/profile/index"));
 const Tweet = React.lazy(() => import("./components/tweet/index"));
 const Likes = React.lazy(() => import("./components/tweet/likes"));
@@ -78,7 +77,6 @@ const Routes = () => {
           component={withMenuBar(Notifications)}
         />
         <PrivateRoute path="/messages" component={withMenuBar(Messages)} />
-        <PrivateRoute path="/lists" component={withMenuBar(Lists)} />
         <PrivateRoute
           exact
           path="/profile/:username"
