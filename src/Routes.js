@@ -7,9 +7,6 @@ const MenuBar = React.lazy(() => import("./components/menubar/index"));
 const SignIn = React.lazy(() => import("./components/signin/index"));
 const Home = React.lazy(() => import("./components/home/index"));
 const Explore = React.lazy(() => import("./components/explore/index"));
-const Notifications = React.lazy(() =>
-  import("./components/notifications/index")
-);
 const Profile = React.lazy(() => import("./components/profile/index"));
 const Tweet = React.lazy(() => import("./components/tweet/index"));
 const Likes = React.lazy(() => import("./components/tweet/likes"));
@@ -71,10 +68,6 @@ const Routes = () => {
         <Route exact path="/" component={SignIn} homeAuthenticated />
         <PrivateRoute exact path="/home" component={withMenuBar(Home)} />
         <PrivateRoute path="/explore" component={withMenuBar(Explore)} />
-        <PrivateRoute
-          path="/notifications"
-          component={withMenuBar(Notifications)}
-        />
         <PrivateRoute
           exact
           path="/profile/:username"
