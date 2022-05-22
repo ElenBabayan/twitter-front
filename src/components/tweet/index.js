@@ -47,27 +47,6 @@ const Tweet = (props) => {
     };
 
     const handleActivity = async (self, count, url) => {
-        if (tweet[self]) {
-            // unlike, unretweet
-            try {
-                await axios.delete(`${URL}/tweet/${url}/remove`, {
-                    data: {
-                        userId: myId,
-                        tweetId: tweet["Tweets.id"],
-                    },
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
-                setTweet({
-                    ...tweet,
-                    [count]: tweet[count] - 1,
-                    [self]: false,
-                });
-            } catch (err) {
-                console.log(err.response.data);
-            }
-        } else {
             // like, retweet
             try {
                 await axios.post(
@@ -91,7 +70,6 @@ const Tweet = (props) => {
                 console.log(err.response.data);
             }
         }
-    };
 
     if (!tweet) return <Loading/>;
 

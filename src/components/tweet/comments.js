@@ -34,7 +34,6 @@ const Comments = () => {
                         </div>
                         <div style={{width: "100%"}}>
                             <TweetDetails color={theme.color}>
-                                {/* <object> to hide nested <a> warning */}
                                 <object>
                                     <Link to={`/profile/${comment.username}`}>
                                         <h3>

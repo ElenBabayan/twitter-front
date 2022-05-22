@@ -4,7 +4,6 @@ import { Field, reduxForm } from "redux-form";
 import { Cover, Avatar, ImgFlex } from "../styles/profile";
 import { StyledInput, Button } from "../styles/common";
 import { Error } from "../styles/signin";
-import UploadButton from "../uploadButton";
 
 const validate = (data) => {
   const errors = {};
@@ -45,26 +44,6 @@ let EditProfileForm = (props) => {
 
   const { isSaveDisabled } = props;
 
-  const handleCover = (e, onChange) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    const url = reader.readAsDataURL(file);
-    reader.onloadend = () => {
-      setCover(reader.result);
-      onChange(file);
-    };
-  };
-
-  const handleAvatar = (e, onChange) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    const url = reader.readAsDataURL(file);
-    reader.onloadend = () => {
-      setAvatar(reader.result);
-      onChange(file);
-    };
-  };
-
   return (
     <form onSubmit={props.handleSubmit}>
       <Cover
@@ -77,7 +56,6 @@ let EditProfileForm = (props) => {
           backgroundSize: "cover",
         }}
       >
-        {/* {cover && <img src={cover} />} */}
         <Field
           type="file"
           name="cover"
@@ -85,21 +63,7 @@ let EditProfileForm = (props) => {
             return (
               <React.Fragment>
                 <label htmlFor="cover" style={{ zIndex: 1 }}>
-                  <UploadButton
-                    isCamera
-                    color="rgb(255,255,255)"
-                    width="22.5px"
-                    height="22.5px"
-                  />
                 </label>
-                <input
-                  type="file"
-                  id="cover"
-                  name="cover"
-                  accept="image/*"
-                  onChange={(e) => handleCover(e, input.onChange)}
-                  style={{ display: "none" }}
-                />
               </React.Fragment>
             );
           }}
@@ -125,21 +89,7 @@ let EditProfileForm = (props) => {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  <UploadButton
-                    isCamera
-                    color="rgb(255,255,255)"
-                    width="22.5px"
-                    height="22.5px"
-                  />
                 </label>
-                <input
-                  type="file"
-                  id="avatar"
-                  name="avatar"
-                  accept="image/*"
-                  onChange={(e) => handleAvatar(e, input.onChange)}
-                  style={{ display: "none" }}
-                />
               </React.Fragment>
             )}
           />
