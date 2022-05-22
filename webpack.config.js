@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
     },
     devServer: {
       historyApiFallback: true,
-      port: 3029,
+      port: 3032,
       open: true,
     },
     module: {

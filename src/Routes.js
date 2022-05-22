@@ -65,7 +65,7 @@ const Routes = () => {
   return (
     <HashRouter>
       <Switch>
-        <Route exact path="/" component={SignIn} homeAuthenticated />
+        <PrivateRoute exact path="/" component={SignIn} homeAuthenticated />
         <PrivateRoute exact path="/home" component={withMenuBar(Home)} />
         <PrivateRoute path="/explore" component={withMenuBar(Explore)} />
         <PrivateRoute

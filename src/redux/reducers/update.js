@@ -1,19 +1,19 @@
-import { SET_UPDATE } from "../actions";
+import {SET_UPDATE} from "../actions";
 
 const initialState = {
-  refresh: false,
+    refresh: false,
 };
 
 const update = (state = initialState, action) => {
-  switch (action.type) {
-    case SET_UPDATE:
-      return {
-        ...state,
-        refresh: !state.refresh,
-      };
-    default:
-      return state;
-  }
+    switch (action.type) {
+        case SET_UPDATE:
+            return {
+                ...state,
+                refresh: !state.refresh,
+            };
+        default:
+            return state;
+    }
 };
 
 export default update;

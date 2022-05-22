@@ -43,8 +43,6 @@ const Like = (props) => {
         setLikeDisabled(false);
       }
     } else {
-      // like
-      // console.log("like");
       try {
         await axios.post(
           `${URL}/tweet/like/add`,
