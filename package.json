@@ -8,7 +8,6 @@
     "build": "webpack"
   },
   "keywords": [],
-  "author": "@RisingGeek",
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
