@@ -12,7 +12,6 @@ import {
   User,
   UserImage,
 } from "../styles/profile";
-import { isImage, isVideo } from "../../media";
 import Loading from "../loading";
 import Modal from "../modal";
 import CommentModal from "../tweet/commentModal";
@@ -37,12 +36,9 @@ const Activity = (props) => {
     header,
     handleHeaderText,
     feed,
-    removeBookmark,
-    isBookmark,
   } = props;
 
   useEffect(() => {
-    // ComponentDidMount
     const cancelToken = axios.CancelToken;
     const source = cancelToken.source();
     getData(source);
@@ -85,16 +81,6 @@ const Activity = (props) => {
 
   if (!tweets) return <Loading />;
 
-  if (isBookmark && !tweets.length)
-    return (
-      <div style={{ textAlign: "center", padding: "40px 0px" }}>
-        <h3 style={{ fontSize: "19px", fontWeight: 700, color: theme.color }}>
-          You haven’t added any Tweets to your Bookmarks yet
-        </h3>
-        <p>When you do, they’ll show up here.</p>
-      </div>
-    );
-
   if (!tweets.length)
     return (
       <EmptyMsg>
@@ -128,7 +114,6 @@ const Activity = (props) => {
                 </User>
                 <div style={{ width: "80%" }}>
                   <TweetDetails color={theme.color}>
-                    {/* <object> to hide nested <a> warning */}
                     <object>
                       <Link to={`/profile/${tweet.username}`}>
                         <h3>
@@ -156,19 +141,6 @@ const Activity = (props) => {
                   <div style={{ color: theme.color }}>
                     {tweet["Tweets.text"]}
                   </div>
-                  {tweet["Tweets.media"] && isImage(tweet["Tweets.media"]) && (
-                    <img
-                      src={tweet["Tweets.media"]}
-                      style={{ width: "100%" }}
-                    />
-                  )}
-                  {tweet["Tweets.media"] && isVideo(tweet["Tweets.media"]) && (
-                    <video
-                      src={tweet["Tweets.media"]}
-                      style={{ width: "100%" }}
-                      controls
-                    ></video>
-                  )}
                   <TweetDetails style={{ justifyContent: "space-between" }}>
                     <Comment
                       tweets={tweets}

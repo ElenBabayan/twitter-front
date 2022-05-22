@@ -17,9 +17,6 @@ export const ModalContent = styled.div`
   width: 40%;
   background: ${(props) => props.bg};
   border-radius: 15px;
-  @media (max-width: 768px) {
-    width: 80%;
-  }
 `;
 
 export const ModalHeader = styled.div`
