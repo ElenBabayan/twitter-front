@@ -100,11 +100,6 @@ const Profile = (props) => {
       path: undefined,
     },
     {
-      name: "media",
-      title: "Media",
-      path: "/media",
-    },
-    {
       name: "likes",
       title: "Likes",
       path: "/likes",
@@ -123,17 +118,6 @@ const Profile = (props) => {
               url={`${URL}/user/get-tweets?userId=${user.id}&myId=${myId}`}
               dataKey="tweets"
               header="Tweets"
-              handleHeaderText={handleHeaderText}
-            />
-          </div>
-        );
-      case "media":
-        return (
-          <div>
-            <Activity
-              url={`${URL}/user/get-media?userId=${user.id}&myId=${myId}`}
-              dataKey="media"
-              header="Photos &amp; Videos"
               handleHeaderText={handleHeaderText}
             />
           </div>

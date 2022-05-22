@@ -7,9 +7,6 @@ export const SideBarBox = styled.div`
   width: 70%;
   margin: 10% 0 0 5%;
   border-radius: 15px;
-  @media (max-width: 768px) {
-    width: 90%;
-  }
 `;
 
 export const Header = styled.div`

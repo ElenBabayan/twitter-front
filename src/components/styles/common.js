@@ -58,25 +58,13 @@ export const Row = styled.div`
 export const Col = styled.div`
   display: block;
   ${(props) =>
-    props.sm &&
-    `  @media (min-width: 576px) {
-      flex: 0 0 ${(props.sm / 24) * 100}%;
-      max-width: ${(props.sm / 24) * 100}%;
-    }`}
+    props.sm }
 
   ${(props) =>
-    props.md &&
-    `@media(min-width: 768px) {
-    flex: 0 0 ${(props.md / 24) * 100}%;
-    max-width: ${(props.md / 24) * 100}%;
-  }`}
+    props.md }
 
   ${(props) =>
-    props.xs &&
-    `@media (max-width: 576px) {
-      flex: 0 0 ${(props.xs / 24) * 100}%;
-      max-width: ${(props.xs / 24) * 100}%;
-    }`}
+    props.xs }
 `;
 
 export const Button = styled.button`

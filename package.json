@@ -1,7 +1,7 @@
 {
   "name": "twitter-clone",
   "version": "1.0.0",
-  "description": "Twitter clone frontend",
+  "description": "Twitter frontend",
   "scripts": {
     "webpack-dev-server": "webpack-dev-server",
     "start": "webpack-dev-server --mode=development",

@@ -58,13 +58,6 @@ export const Form = styled.div`
       border-bottom: 2px solid rgb(29, 161, 242);
     }
   }
-  @media (max-width: 768px) {
-    margin-bottom: ${(props) => (props.isLogin ? "50px" : "12px")};
-    div {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
 `;
 
 export const Flex = styled.div`
@@ -83,10 +76,6 @@ export const Flex = styled.div`
     color: black;
     margin-top: 15%;
   }
-  @media (max-width: 768px) {
-    div {
-      width: 100%;
-    }
   }
 `;
 

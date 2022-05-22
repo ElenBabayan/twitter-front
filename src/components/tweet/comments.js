@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import Loading from "../loading";
 import { PeopleFlex, UserImage, TweetDetails } from "../styles/profile";
-import { isImage, isVideo } from "../../media";
 
 const URL = process.env.REACT_APP_SERVER_URL;
 
@@ -52,21 +51,6 @@ const Comments = () => {
                 </span>
               </TweetDetails>
               <div style={{color:theme.color}}>{comment["Comments.text"]}</div>
-              {comment["Comments.media"] &&
-                isImage(comment["Comments.media"]) && (
-                  <img
-                    src={comment["Comments.media"]}
-                    style={{ width: "100%" }}
-                  />
-                )}
-              {comment["Comments.media"] &&
-                isVideo(comment["Comments.media"]) && (
-                  <video
-                    src={comment["Comments.media"]}
-                    style={{ width: "100%" }}
-                    controls
-                  ></video>
-                )}
             </div>
           </PeopleFlex>
         );

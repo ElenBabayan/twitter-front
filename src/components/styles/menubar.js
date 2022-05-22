@@ -16,14 +16,6 @@ export const Header = styled.header`
       border-radius: 50px;
     }
   }
-  @media (max-width: 992px) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  @media (max-width: 768px) {
-    align-items: center;
-  }
 `;
 
 export const MenuItem = styled.div`
@@ -41,9 +33,6 @@ export const MenuItem = styled.div`
     background: rgba(29, 161, 242, 0.1);
     border-radius: 50px;
   }
-  @media (max-width: 768px) {
-    margin-top: 0;
-  }
 `;
 
 export const MenuTitle = styled.span`
@@ -52,9 +41,6 @@ export const MenuTitle = styled.span`
   font-weight: bold;
   line-height: 1.3;
   text-transform: capitalize;
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const Button = styled.button`

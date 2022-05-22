@@ -127,12 +127,6 @@ export const Avatar = styled.div`
   border: ${(props) => `4px solid ${props.bg}`};
   border-radius: 50%;
   margin-top: -13%;
-  @media (max-width: 768px) {
-    margin-top: -10%;
-  }
-  @media (max-width: 576px) {
-    margin-top: -25%;
-  }
 `;
 
 export const ImgFlex = styled.div`
@@ -172,12 +166,6 @@ export const PeopleFlex = styled.div`
 export const User = styled.div`
   width: 10%;
   margin-right: 10px;
-  @media (max-width: 1024px) {
-    width: 15%;
-  }
-  @media (max-width: 576px) {
-    width: 20%;
-  }
 `;
 
 export const UserImage = styled.img`
