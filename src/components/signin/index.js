@@ -9,8 +9,8 @@ import { SET_USER, SET_THEME } from "../../redux/actions";
 import SignupForm from "./signupForm";
 import Modal from "../modal";
 import { logo, motto } from "./paths";
-// import { Row, Col } from "../styles/common";
 import { Row, Col } from "antd";
+import mainImgUrl from '../logo.jpg';
 
 const URL = process.env.REACT_APP_SERVER_URL;
 
@@ -88,7 +88,16 @@ const SignIn = (props) => {
           style={{ overflow: "hidden", position: "relative" }}
         >
           <LogoWrapper>
-            <Icon d={logo} height="130vh" fill="rgb(29,161,242)" />
+            <img
+                src={"https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png"}
+                alt="App"
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  top: "50%",
+                  transform: "translate(-50%,-50%)",
+                }}
+            />
             <div
               style={{
                 position: "absolute",
@@ -97,17 +106,6 @@ const SignIn = (props) => {
                 transform: "translate(-50%,-50%)",
               }}
             >
-              {motto.map((item) => (
-                <Motto key={item.text}>
-                  <Icon
-                    d={item.path}
-                    width="28.75px"
-                    height="28.75px"
-                    fill="rgb(255,255,255)"
-                  />
-                  <span>{item.text}</span>
-                </Motto>
-              ))}
             </div>
           </LogoWrapper>
         </Col>
@@ -125,8 +123,7 @@ const SignIn = (props) => {
                 height="41.25px"
                 fill="rgb(29,161,242)"
               />
-              <h1>See what's happening in the world right now</h1>
-              <p>Join twitter today.</p>
+              <h1>Welcome to our app!</h1>
               <Button
                 bg="rgb(29,160,240)"
                 color="rgb(255,255,255)"

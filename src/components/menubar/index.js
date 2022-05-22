@@ -18,7 +18,6 @@ const MenuBar = () => {
   const handleLogout = () => {
     dispatch({ type: LOGOUT_USER });
     history.replace("/");
-    //let token = useSelector((state) => state.profile.user.token);
     useSelector((state) => (state.profile.user.token.set(null)));
   };
 

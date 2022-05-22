@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
     },
     devServer: {
       historyApiFallback: true,
-      port: 3025,
+      port: 3027,
       open: true,
     },
     module: {
@@ -28,7 +28,7 @@ module.exports = (env, argv) => {
           use: ["style-loader", "css-loader"],
         },
         {
-          test: /\.(png|j?g|svg|gif)?$/,
+          test: /\.(png|svg|gif|jpg)?$/,
           use: "file-loader",
         },
       ],

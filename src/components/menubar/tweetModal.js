@@ -36,19 +36,6 @@ const TweetModal = (props) => {
     handleClose && handleClose();
   };
 
-  const handlePhoto = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    const url = reader.readAsDataURL(file);
-    const isImage = file.type.includes("image");
-
-    reader.onloadend = () => {
-      isImage
-        ? setPreview({ image: reader.result, video: "", media: file })
-        : setPreview({ image: "", video: reader.result, media: file });
-    };
-  };
-
   return (
     <React.Fragment>
       <Flex bg={theme.bg} color={theme.color}>
@@ -62,42 +49,29 @@ const TweetModal = (props) => {
         </div>
         <div style={{ width: "100%" }}>
           <textarea
-            rows={rows || 5}
-            placeholder="What's happening?"
-            value={text}
-            onChange={(e) => {
-              setText(e.target.value);
-              e.target.value
-                ? setIsTweetDisabled(false)
-                : setIsTweetDisabled(true);
-            }}
-          ></textarea>
+    rows={rows || 5}
+    placeholder="What's happening?"
+    value={text}
+    onChange={(e) => {
+      setText(e.target.value);
+      e.target.value
+          ? setIsTweetDisabled(false)
+          : setIsTweetDisabled(true);
+    }}
+    />
           <div style={{ marginBottom: "10px" }}>
             {preview.image && (
               <img src={preview.image} style={{ width: "100%" }} />
             )}
             {preview.video && (
               <video
-                src={preview.video}
-                style={{ width: "100%" }}
-                controls
-              ></video>
+    src={preview.video}
+    style={{width: "100%"}}
+    controls
+    />
             )}
           </div>
           <Flex style={{ alignItems: "center", justifyContent: "flex-end" }}>
-            <div>
-              <label htmlFor="photo">
-                <UploadButton />
-              </label>
-              <input
-                type="file"
-                id="photo"
-                name="photo"
-                accept="image/*,video/*"
-                onChange={handlePhoto}
-                style={{ display: "none" }}
-              />
-            </div>
             <div>
               <Button
                 onClick={addTweet}

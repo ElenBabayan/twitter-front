@@ -85,7 +85,6 @@ const Explore = () => {
                           </Link>
                         </object>
                       </div>
-                      {/* <div>Following</div> */}
                     </PeopleDetails>
                     <div>
                       <p>{item.bio}</p>
