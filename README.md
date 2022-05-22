@@ -2,10 +2,6 @@
 
 Twitter clone built using React, Redux.
 
-Demo - [https://twitter-geek.netlify.app/](https://twitter-geek.netlify.app/)
-
-Backend Repository - [https://github.com/RisingGeek/twitter-clone-backend](https://github.com/RisingGeek/twitter-clone-backend)
-
 ## Features
 
 1. Signup/Login
@@ -14,13 +10,7 @@ Backend Repository - [https://github.com/RisingGeek/twitter-clone-backend](https
 4. Like, Retweet, comment
 5. View profile
 6. Search users in explore section
-7. Add bookmarks
-8. Dark mode
-
-## Upcoming Features
-
-1. Notifications
-2. Live updations of like, retweet
+7. Dark mode
 
 ## Run locally
 
@@ -32,14 +22,3 @@ Backend Repository - [https://github.com/RisingGeek/twitter-clone-backend](https
 ```
 
 - `npm install && npm start`
-
-## Demo account
-
-```javascript
-username: demoaccount
-password: 12345678
-```
-
-## Demo
-
-![Feed](demo/feed.png)
